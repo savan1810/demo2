@@ -17,11 +17,18 @@ const Page = () => {
   const login =(event) => {
     try{
         event.preventDefault()
-        signInWithEmailAndPassword(auth,email, password).then((value)=>alert('logged in successfully')).catch((error)=>{return alert(error)})
+        signInWithEmailAndPassword(auth,email, password).then((value)=>{return (
+          <>
+
+alert('logged in successfully')
+router.push('/home')
+          </>
+        )
+        }).catch((error)=>{return alert(error)})
         setEmail('');
         setPassword('');
         // alert('successfully logedin')
-        router.push('/home')
+        
     }
     catch(e){
       console.log(e)
