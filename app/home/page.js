@@ -74,7 +74,7 @@ export default function Page() {
                 </button>
             </div>
 
-                <form className='w-2/5 -mt-6 mx-auto pt-12 ' onSubmit={submit}>
+                <form className='w-2/5 -mt-20 mx-auto pt-12 ' onSubmit={submit}>
                     <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div className="relative">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -93,14 +93,14 @@ export default function Page() {
                 </form>
                 
 
-                <div className='flex flex-wrap justify-evenly w-4/5  mx-auto mt-8 '>
+                <div className='flex flex-wrap justify-evenly w-5/6  mx-auto mt-4 '>
 
                     {image.length==0?'OOPs, No Data Found':image.map((items,index) => {
                         return (
                             <>
                             
                                 <div key={index} className="hover:scale-105 cursor-pointer  card text-gray-100 rounded-xl border border-gray-500 mt-4" style={{ width: "", backgroundColor: "rgb(63,63,73)" }} >
-                                    <Image key={index} src={items.images.original.url} width={256} height={192} loading="lazy" className="rounded-t-xl card-img-top  h-48 w-64 object-cover" alt="..." />
+                                    <Image key={index} src={items.images.original.url} width={208} height={160} loading="lazy" className="rounded-t-xl card-img-top  h-40 w-52 object-cover" alt="..." />
                                     {/* <div>{items.images.original.url}</div> */}
                                     <div key={index} className="card-body flex justify-between px-2 items-center ">
                                         <h5 key={index} className="card-title my-2 align-middle   max-w-56 overflow-hidden ">{items.title?.slice(0, 20)}</h5>
@@ -113,7 +113,7 @@ export default function Page() {
                         )
                     })}
                 </div>
-                <div className="w-full flex justify-center my-10 text-white">
+                <div className="w-full flex justify-center my-6 text-white">
                     <ThemeProvider theme={darkTheme}>
                         <CssBaseline />
                         <Stack spacing={2} >
