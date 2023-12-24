@@ -24,7 +24,14 @@ alert('logged in successfully')
 router.push('/home')
           </>
         )
-        }).catch((error)=>{return alert(error)})
+        }).catch((error)=>{return (
+          <>
+
+          alert(error)
+          router.push('/login')
+          </>
+          
+          )})
         setEmail('');
         setPassword('');
         // alert('successfully logedin')
