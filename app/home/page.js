@@ -11,6 +11,7 @@ import { auth } from '../Firebase';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Image from "next/image";
 
 
 const darkTheme = createTheme({
@@ -32,7 +33,7 @@ export default function Page() {
 
     useEffect(() => {
         fetchGIF();
-    }, [page])
+    })
 
     const fetchGIF = async () => {
         let url = `https://api.giphy.com/v1/gifs/trending?api_key=GlVGYHkr3WSBnllca54iNt0yFbjz7L65&limit=10&offset=${page === 1 ? 1 : ((page * 10) - 1)}`
@@ -97,7 +98,7 @@ export default function Page() {
                         return (
                             <>
                                 <div key={index} className="hover:scale-105 cursor-pointer  card text-gray-100 rounded-xl border border-gray-500 mt-4" style={{ width: "", backgroundColor: "rgb(63,63,73)" }} >
-                                    <img key={index} src={items.images.original.url} width={256} height={192} loading="lazy" className="rounded-t-xl card-img-top  h-48 w-64 object-cover" alt="..." />
+                                    <Image key={index} src={items.images.original.url} width={256} height={192} loading="lazy" className="rounded-t-xl card-img-top  h-48 w-64 object-cover" alt="..." />
                                     {/* <div>{items.images.original.url}</div> */}
                                     <div key={index} className="card-body flex justify-between px-2 items-center ">
                                         <h5 key={index} className="card-title my-2 align-middle   max-w-56 overflow-hidden ">{items.title?.slice(0, 20)}</h5>

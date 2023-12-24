@@ -3,12 +3,12 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation';
 
-const page = () => {
+const Page = () => {
   const router = useRouter()
 
   useEffect(()=>{
     router.push('/login')
-  },[])
+})
 
   return (
     <div>
@@ -17,4 +17,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

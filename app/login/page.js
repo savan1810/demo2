@@ -17,9 +17,10 @@ const Page = () => {
   const login =(event) => {
     try{
         event.preventDefault()
-        signInWithEmailAndPassword(auth,email, password)
+        signInWithEmailAndPassword(auth,email, password).then((value)=>alert(logged in successfully)).catch((error)=>alert(error))
         setEmail('');
         setPassword('');
+        // alert('successfully logedin')
         router.push('/home')
     }
     catch(e){
