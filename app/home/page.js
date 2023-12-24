@@ -91,7 +91,7 @@ export default function Page() {
                         <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-sky-500 dark:hover:bg-sky-400 dark:focus:ring-sky-400">Search</button>
                     </div>
                 </form>
-                <img src='/1.webp' alt=""/>
+                
 
                 <div className='flex flex-wrap justify-evenly w-4/5  mx-auto mt-8 '>
 
