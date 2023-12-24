@@ -33,7 +33,7 @@ export default function Page() {
 
     useEffect(() => {
         fetchGIF();
-    })
+    },[page])
 
     const fetchGIF = async () => {
         let url = `https://api.giphy.com/v1/gifs/trending?api_key=GlVGYHkr3WSBnllca54iNt0yFbjz7L65&limit=10&offset=${page === 1 ? 1 : ((page * 10) - 1)}`
