@@ -64,7 +64,7 @@ const Page = () => {
                  </div>
                 
                 <div className='w-full py-4 text-center cursor-pointer'>
-                                <button  disabled={(!email || !password || !passwordAgain) || (password !== passwordAgain)}  onClick={signup} className='disabled:opacity-10 cursor-pointer w-full bg-gradient-to-r from-[#00A9FF] to-[#A0E9FF]  my-2 text-xl p-4  outline-0 text-white rounded-md' >Sign up</button>
+                                <button  disabled={(!email || !password || !passwordAgain) || (password !== passwordAgain)}  onClick={signup} className='disabled:opacity-70 cursor-pointer w-full bg-gradient-to-r from-[#00A9FF] to-[#A0E9FF]  my-2 text-xl p-4  outline-0 text-white rounded-md' >Sign up</button>
                             </div>
                 
 

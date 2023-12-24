@@ -91,12 +91,14 @@ export default function Page() {
                         <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-sky-500 hover:bg-sky-400 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-sky-500 dark:hover:bg-sky-400 dark:focus:ring-sky-400">Search</button>
                     </div>
                 </form>
+                <img src='/1.webp' alt=""/>
 
                 <div className='flex flex-wrap justify-evenly w-4/5  mx-auto mt-8 '>
 
                     {image.length==0?'OOPs, No Data Found':image.map((items,index) => {
                         return (
                             <>
+                            
                                 <div key={index} className="hover:scale-105 cursor-pointer  card text-gray-100 rounded-xl border border-gray-500 mt-4" style={{ width: "", backgroundColor: "rgb(63,63,73)" }} >
                                     <Image key={index} src={items.images.original.url} width={256} height={192} loading="lazy" className="rounded-t-xl card-img-top  h-48 w-64 object-cover" alt="..." />
                                     {/* <div>{items.images.original.url}</div> */}
