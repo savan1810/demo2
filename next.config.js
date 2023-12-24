@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-    formats: ['image/gif', 'image/webp'],
-    image: [
-      {
-        protocol: 'https',
-        hostname: 'api.giphy.com',
-        port: '',
-        pathname: '/image/upload/**',
-      },
+  images: {
+    remotePatterns: [{
+      protocol:"https",
+      hostname:"**"
+    }
     ],
+  
+  },
 }
 
 module.exports = nextConfig
