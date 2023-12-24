@@ -21,7 +21,7 @@ const Page = () => {
           <>
 
 alert('logged in successfully')
-router.push('/home')
+{/* router.push('/home') */}
           </>
         )
         }).catch((error)=>{return (
